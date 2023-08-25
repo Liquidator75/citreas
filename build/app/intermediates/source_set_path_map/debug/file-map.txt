@@ -1,0 +1,14 @@
+thinkrich.com.citreas.app-jetified-window-1.0.0-beta04-0 /Users/liquidator/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
+thinkrich.com.citreas.app-jetified-annotation-experimental-1.1.0-1 /Users/liquidator/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
+thinkrich.com.citreas.app-core-1.6.0-2 /Users/liquidator/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res
+thinkrich.com.citreas.app-jetified-window-java-1.0.0-beta04-3 /Users/liquidator/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
+thinkrich.com.citreas.app-debug-4 /Users/liquidator/Desktop/citreas/android/app/src/debug/res
+thinkrich.com.citreas.app-main-5 /Users/liquidator/Desktop/citreas/android/app/src/main/res
+thinkrich.com.citreas.app-pngs-6 /Users/liquidator/Desktop/citreas/build/app/generated/res/pngs/debug
+thinkrich.com.citreas.app-resValues-7 /Users/liquidator/Desktop/citreas/build/app/generated/res/resValues/debug
+thinkrich.com.citreas.app-rs-8 /Users/liquidator/Desktop/citreas/build/app/generated/res/rs/debug
+thinkrich.com.citreas.app-mergeDebugResources-9 /Users/liquidator/Desktop/citreas/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+thinkrich.com.citreas.app-mergeDebugResources-10 /Users/liquidator/Desktop/citreas/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+thinkrich.com.citreas.app-merged_res-11 /Users/liquidator/Desktop/citreas/build/app/intermediates/merged_res/debug
+thinkrich.com.citreas.app-packaged_res-12 /Users/liquidator/Desktop/citreas/build/libphonenumber_plugin/intermediates/packaged_res/debug
+thinkrich.com.citreas.app-packaged_res-13 /Users/liquidator/Desktop/citreas/build/money_converter/intermediates/packaged_res/debug

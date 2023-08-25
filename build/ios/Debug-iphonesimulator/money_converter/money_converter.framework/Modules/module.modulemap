@@ -1,0 +1,11 @@
+framework module money_converter {
+  umbrella header "money_converter-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module money_converter.Swift {
+  header "money_converter-Swift.h"
+  requires objc
+}
