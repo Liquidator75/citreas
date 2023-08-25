@@ -95,6 +95,51 @@ class _NumberInputButtonState extends State<NumberInputButton> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            CupertinoIcons.arrow_left,
+            color: Colors.white,
+          ),
+        ),
+        // backgroundColor: Colors.transparent,
+        // elevation: 0,
+
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FadeInImage.assetNetwork(
+              placeholder: 'assets/coins_icon.png', // Placeholder image or icon
+              image: image,
+              width: 29,
+              fit: BoxFit.contain,
+
+              imageErrorBuilder: (BuildContext context, Object exception,
+                  StackTrace? stackTrace) {
+                return Icon(
+                  Icons
+                      .attach_money, // Fallback icon if the network image fails
+                  size: 29,
+                );
+              },
+            ),
+            SizedBox(width: 10),
+            Text(
+              '${widget.name} ${symbol.toUpperCase()}',
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'NexaRegualr',
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: primaryColor,
       body: Container(
         color: primaryColor,
@@ -102,50 +147,12 @@ class _NumberInputButtonState extends State<NumberInputButton> {
           physics: NeverScrollableScrollPhysics(),
           child: Column(
             children: [
-              SizedBox(height: 20),
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 50),
+                padding: EdgeInsets.symmetric(vertical: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          icon: Icon(
-                            CupertinoIcons.arrow_left,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Expanded(
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.network(
-                                  image,
-                                  width: 29,
-                                ),
-                                SizedBox(width: 10),
-                                Text(
-                                  '${widget.name} ${symbol.toUpperCase()}',
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontFamily: 'NunitoSans-Meduim',
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
                     Text(
                       'Amount',
                       style: TextStyle(
@@ -176,7 +183,7 @@ class _NumberInputButtonState extends State<NumberInputButton> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 30,
-                                  fontFamily: 'NunitoSans-Bold',
+                                  fontFamily: 'NexaBold',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -219,7 +226,7 @@ class _NumberInputButtonState extends State<NumberInputButton> {
                       "1 $symbol = $currentPrice USD",
                       style: TextStyle(
                         fontSize: 14,
-                        fontFamily: 'NunitoSans-Bold',
+                        fontFamily: 'NexaBold',
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -240,7 +247,7 @@ class _NumberInputButtonState extends State<NumberInputButton> {
                               i.toString(),
                               style: TextStyle(
                                 fontSize: 18,
-                                fontFamily: 'NunitoSans-Bold',
+                                fontFamily: 'NexaBold',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),

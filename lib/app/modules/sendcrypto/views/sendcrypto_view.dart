@@ -16,152 +16,148 @@ class SendcryptoView extends GetView<SendcryptoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 70,
-              horizontal: 25,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+        title: Text(
+          'Send BTC',
+          style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                fontSize: 17,
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+              ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(
+              "Amount",
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
             ),
-            child: Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  icon: Icon(Icons.arrow_back),
-                ),
-                Expanded(
-                  child: Center(
-                    child: Text(
-                      'Send BTC',
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                            fontSize: 17,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                          ),
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: 6,
+                  ),
+                  child: Text(
+                    "\$500.90",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontSize: 30,
+                          color: primaryColor,
+                          fontWeight: FontWeight.w800,
+                        ),
                   ),
                 ),
               ],
             ),
-          ),
-          Text(
-            "Amount",
-            style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
-                ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(
-                  top: 6,
-                ),
-                child: Text(
-                  "\$500.90",
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontSize: 30,
-                        color: primaryColor,
-                        fontWeight: FontWeight.w800,
+            Padding(
+              padding: EdgeInsets.all(7.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                          width:
+                              8), // Add some spacing between the icon and the text
+                      Text(
+                        '0.084 BTC',
+                        style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                              fontFamily: 'NexaBold',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                            ),
                       ),
-                ),
+                    ],
+                  )
+                ],
               ),
-            ],
-          ),
-          Padding(
-            padding: EdgeInsets.all(7.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                        width:
-                            8), // Add some spacing between the icon and the text
-                    Text(
-                      '0.084 BTC',
-                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                            fontFamily: 'NexaBold',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 15,
-                          ),
-                    ),
-                  ],
-                )
-              ],
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          CodeScanButton(
-            signup: 'Open Code Scanner',
-            onPressed: () {},
-            color: textColor,
-            buttonTextColor: textColor,
-            sidedColor: textColor.withOpacity(.2),
-          ),
-          SizedBox(
-            height: 60,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 22,
+            SizedBox(
+              height: 10,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Send to',
-                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                        color: Colors.black,
-                        fontFamily: 'NexaBold',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                      ),
-                ),
-                SizedBox(
-                  height: 13,
-                ),
-                UsernameField(
-                  hintext: 'Enter wallet address',
-                ),
-                SizedBox(
-                  height: 35,
-                ),
-                Text(
-                  'Note',
-                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                        color: Colors.black,
-                        fontFamily: 'NexaBold',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                      ),
-                ),
-                SizedBox(
-                  height: 13,
-                ),
-                TextNoteField(
-                  hintext: 'Drope a note for receiver',
-                ),
-                SizedBox(
-                  height: 60,
-                ),
-                FilledButtoned(
-                  color: primaryColor,
-                  buttonTextColor: Colors.white,
-                  login: "Continue",
-                  Onpressed: () => Get.to(TransactionOverviewView()),
-                ),
-              ],
+            CodeScanButton(
+              signup: 'Open Code Scanner',
+              onPressed: () {},
+              color: textColor,
+              buttonTextColor: textColor,
+              sidedColor: textColor.withOpacity(.2),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 60,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 22,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Send to',
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                          color: Colors.black,
+                          fontFamily: 'NexaBold',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                        ),
+                  ),
+                  SizedBox(
+                    height: 13,
+                  ),
+                  UsernameField(
+                    hintext: 'Enter wallet address',
+                  ),
+                  SizedBox(
+                    height: 35,
+                  ),
+                  Text(
+                    'Note',
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                          color: Colors.black,
+                          fontFamily: 'NexaBold',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                        ),
+                  ),
+                  SizedBox(
+                    height: 13,
+                  ),
+                  TextNoteField(
+                    hintext: 'Drope a note for receiver',
+                  ),
+                  SizedBox(
+                    height: 60,
+                  ),
+                ],
+              ),
+            ),
+            FilledButtoned(
+              color: primaryColor,
+              buttonTextColor: Colors.white,
+              login: "Continue",
+              Onpressed: () => Get.to(TransactionOverviewView()),
+            ),
+          ],
+        ),
       ),
     );
   }

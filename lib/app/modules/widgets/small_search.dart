@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SmallSearchField extends StatefulWidget {
   final String hintText;
@@ -30,7 +31,7 @@ class _SmallSearchFieldState extends State<SmallSearchField> {
   Widget build(BuildContext context) {
     return Container(
       height: 40.0,
-      width: 320,
+      width: Get.width > 600 ? 320 : 290,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100.0),
         border: Border.all(color: Colors.grey),
@@ -43,9 +44,7 @@ class _SmallSearchFieldState extends State<SmallSearchField> {
           Expanded(
             child: TextField(
               controller: _textEditingController,
-              style: TextStyle(
-                color: Colors.black,
-              ),
+              style: TextStyle(color: Colors.black, fontFamily: 'NexaRegualr'),
               decoration: InputDecoration(
                 hintText: widget.hintText,
                 border: InputBorder.none,

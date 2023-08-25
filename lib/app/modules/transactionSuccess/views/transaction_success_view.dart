@@ -16,32 +16,47 @@ class TransactionSuccessView extends GetView<TransactionSuccessController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            CupertinoIcons.arrow_left,
+            color: Colors.white,
+          ),
+        ),
+        title: Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Transaction Completed!",
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                        color: Colors.black,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
         child: Column(
           children: [
             SizedBox(
-              height: 30,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Transaction Completed!",
-                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                          color: Colors.black,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600,
-                        ),
-                  )
-                ],
-              ),
+              height: 13,
             ),
             Image.asset(
               "assets/completed.png",
-              width: 230,
+              width: Get.width > 600 ? 230 : 150,
             ),
             Column(
               children: [
@@ -116,7 +131,7 @@ class TransactionSuccessView extends GetView<TransactionSuccessController> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(6.0),
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(

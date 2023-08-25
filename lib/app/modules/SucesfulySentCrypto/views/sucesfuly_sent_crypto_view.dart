@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:citreas/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:citreas/app/modules/widgets/filled_button.dart';
 import 'package:citreas/config/colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,54 +15,48 @@ class SucesfulySentCryptoView extends GetView<SucesfulySentCryptoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            CupertinoIcons.arrow_left,
+            color: Colors.black,
+          ),
+        ),
+        title: Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Transaction Completed!",
+                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                        color: Colors.black,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 30,
-            ),
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 13,
-                vertical: 35,
+                vertical: 2,
               ),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Get.back();
-                        },
-                        icon: Icon(
-                          CupertinoIcons.clear,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Expanded(
-                        child: Align(
-                          alignment: Alignment.center,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // ignore: sized_box_for_whitespace
-
-                              Text(
-                                'Transaction Succesful',
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  fontFamily: 'NexaBold',
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                   Stack(
                     alignment: Alignment.center,
                     children: [
@@ -157,7 +152,7 @@ class SucesfulySentCryptoView extends GetView<SucesfulySentCryptoController> {
                     ),
                   ),
                   SizedBox(
-                    height: 70,
+                    height: Get.height > 600 ? 45 : 70,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -177,7 +172,7 @@ class SucesfulySentCryptoView extends GetView<SucesfulySentCryptoController> {
                     color: primaryColor,
                     buttonTextColor: Colors.white,
                     login: "Done",
-                    Onpressed: () {},
+                    Onpressed: () => Get.to(DashboardView()),
                   ),
                 ],
               ),

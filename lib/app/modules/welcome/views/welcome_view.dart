@@ -64,7 +64,7 @@ class WelcomeView extends GetView<WelcomeController> {
                             TextSpan(
                               text: 'Good Morning, ',
                               style: TextStyle(
-                                fontFamily: "NunitoSans",
+                                fontFamily: "NexaRegualr",
                                 fontSize: 16,
                                 decoration: TextDecoration.none,
                               ),
@@ -72,7 +72,7 @@ class WelcomeView extends GetView<WelcomeController> {
                             TextSpan(
                               text: 'Nicolas',
                               style: TextStyle(
-                                fontFamily: "NunitoSans",
+                                fontFamily: "NexaRegualr",
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 decoration: TextDecoration.none,
@@ -104,57 +104,19 @@ class WelcomeView extends GetView<WelcomeController> {
                   //  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     RoundCircle(
-                      onTap: () => Get.bottomSheet(
-                        Material(
-                          borderRadius: BorderRadius.circular(16),
-                          child: SizedBox(
-                            child: SingleChildScrollView(
-                              child: Column(
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(top: 8),
-                                    height: 5,
-                                    width: Get.width / 3,
-                                    decoration: BoxDecoration(
-                                      color: Colors.black38,
-                                      borderRadius: BorderRadius.circular(100),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 20, horizontal: 20),
-                                    child: Row(
-                                      children: [
-                                        SmallSearchField(
-                                          hintText: 'Search Crypto',
-                                        ),
-                                        SizedBox(width: 12),
-                                        GestureDetector(
-                                          onTap: () {},
-                                          child: Text(
-                                            'Cancel',
-                                            style: TextStyle(
-                                              color: primaryColor,
-                                              fontFamily: 'NunitoSans-Meduim',
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  BootomSheetCoins(
-                                    namesymbol: 'Buy',
-                                    coiname: 'Buy',
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        isScrollControlled:
-                            true, // Adjusts the height automatically
-                      ),
+                      onTap: () {
+                        showModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          isScrollControlled: true,
+                          builder: (BuildContext context) {
+                            return BottomSheetCoins(
+                              namesymbol: 'Buy',
+                              coiname: 'Buy',
+                            );
+                          },
+                        );
+                      },
                       icon: CupertinoIcons.archivebox_fill,
                       text: 'Buy',
                     ),
@@ -162,59 +124,19 @@ class WelcomeView extends GetView<WelcomeController> {
                       width: 40,
                     ),
                     RoundCircle(
-                      onTap: () => Get.bottomSheet(
-                        Material(
-                          borderRadius: BorderRadius.circular(16),
-                          child: SizedBox(
-                            child: SingleChildScrollView(
-                              child: Column(
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(top: 8),
-                                    height: 5,
-                                    width: Get.width / 3,
-                                    decoration: BoxDecoration(
-                                      color: Colors.black38,
-                                      borderRadius: BorderRadius.circular(100),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 20, horizontal: 20),
-                                    child: Row(
-                                      children: [
-                                        SmallSearchField(
-                                          hintText: 'Search Crypto',
-                                        ),
-                                        SizedBox(
-                                          width: 12,
-                                        ),
-                                        GestureDetector(
-                                          onTap: () {},
-                                          child: Text(
-                                            'Cancel',
-                                            style: TextStyle(
-                                              color: primaryColor,
-                                              fontFamily: 'NunitoSans-Meduim',
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  BootomSheetCoins(
-                                    namesymbol: 'Sell',
-                                    coiname: 'Sell',
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        isScrollControlled:
-                            true, // Adjusts the height automatically
-                      ),
+                      onTap: () {
+                        showModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          isScrollControlled: true,
+                          builder: (BuildContext context) {
+                            return BottomSheetCoins(
+                              namesymbol: 'Sell',
+                              coiname: 'Sell',
+                            );
+                          },
+                        );
+                      },
                       icon: CupertinoIcons.minus_square_fill,
                       text: 'Sell',
                     ),

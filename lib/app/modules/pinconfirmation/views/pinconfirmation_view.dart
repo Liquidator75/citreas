@@ -17,60 +17,66 @@ class PinconfirmationView extends GetView<PinconfirmationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
+        elevation: 0,
+      ),
       backgroundColor: primaryColor,
       body: Column(
         children: [
-          SizedBox(
-            height: 140,
-          ),
-          Expanded(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Enter Your Secret PIN",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium!
-                        .copyWith(color: Colors.white, fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    height: 100.0,
-                    child: Obx(
-                      () => Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          for (var i = 0; i < controller.activities.length; i++)
-                            AnimationBoxItem(
-                              clear: controller.clears[i].value,
-                              active: controller
-                                  .activities[i % controller.values.length]
-                                  .value,
-                              value: controller.numbers[i],
-                            ),
-                        ],
+          SizedBox(height: Get.height > 600 ? 30 : 140),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Enter Your Secret PIN",
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Colors.white,
+                        fontSize: 15,
                       ),
+                ),
+                SizedBox(height: 15),
+                Container(
+                  height: 80.0,
+                  child: Obx(
+                    () => Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        for (var i = 0; i < controller.activities.length; i++)
+                          AnimationBoxItem(
+                            clear: controller.clears[i].value,
+                            active: controller
+                                .activities[i % controller.values.length].value,
+                            value: controller.numbers[i],
+                          ),
+                      ],
                     ),
                   ),
-                  Text(
-                    controller.message.value,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: controller.message == "Success"
+                ),
+                Text(
+                  controller.message.value,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: controller.message.value == "Success"
                             ? risingColor
                             : percentageColor,
                         fontSize: 15,
-                        fontWeight: FontWeight.w400),
-                  ),
-                ],
-              ),
+                        fontWeight: FontWeight.w400,
+                      ),
+                ),
+              ],
             ),
           ),
           Expanded(
-            flex: 2,
+            flex: 3,
             child: GridView.builder(
               padding: EdgeInsets.all(0.0),
               physics: NeverScrollableScrollPhysics(),
@@ -130,21 +136,18 @@ class PinconfirmationView extends GetView<PinconfirmationController> {
               itemCount: 12,
             ),
           ),
+          SizedBox(height: 4),
           SizedBox(
             height: 60,
-            child: Expanded(
-              child: LinedButton(
-                sidedColor: Colors.white,
-                buttonTextColor: Colors.white,
-                color: primaryColor,
-                signup: 'Next',
-                onPressed: () => Get.to(TransactionSuccessView()),
-              ),
+            child: LinedButton(
+              sidedColor: Colors.white,
+              buttonTextColor: Colors.white,
+              color: primaryColor,
+              signup: 'Next',
+              onPressed: () => Get.to(TransactionSuccessView()),
             ),
           ),
-          SizedBox(
-            height: 60,
-          )
+          SizedBox(height: 18),
         ],
       ),
     );

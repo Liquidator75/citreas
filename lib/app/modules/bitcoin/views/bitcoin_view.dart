@@ -33,6 +33,48 @@ class BitcoinView extends GetView<BitcoinController> {
 
     //final String id = arguments['coinid'];
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () => Get.back(),
+          icon: Icon(
+            CupertinoIcons.arrow_left,
+            color: Colors.black,
+          ),
+        ),
+        title: Center(
+          child: Column(
+            children: [
+              Text(symbol,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontFamily: 'NunitoSans-Bold',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 21,
+                        color: Colors.black,
+                      )),
+              Text(
+                name,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      fontFamily: 'NunitoSans-Meduim',
+                      fontWeight: FontWeight.normal,
+                      fontSize: 16,
+                      color: textColor,
+                    ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(
+              CupertinoIcons.heart,
+              color: Colors.black,
+            ),
+          ),
+        ],
+      ),
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 17),
@@ -41,48 +83,7 @@ class BitcoinView extends GetView<BitcoinController> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 80,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      onPressed: (() => Get.back()),
-                      icon: Icon(
-                        CupertinoIcons.arrow_left,
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          symbol,
-                          style:
-                              Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                    fontFamily: 'NunitoSans-Bold',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 21,
-                                    color: Colors.black,
-                                  ),
-                        ),
-                        Text(
-                          name,
-                          style:
-                              Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                    fontFamily: 'NunitoSans-Meduim',
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 16,
-                                    color: textColor,
-                                  ),
-                        ),
-                      ],
-                    ),
-                    Icon(
-                      CupertinoIcons.heart,
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
+                  height: Get.height > 600 ? 20 : 105,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -419,10 +420,7 @@ class BitcoinView extends GetView<BitcoinController> {
                   ),
                 ),
                 SizedBox(
-                  height: 13,
-                ),
-                SizedBox(
-                  height: 13,
+                  height: 26,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

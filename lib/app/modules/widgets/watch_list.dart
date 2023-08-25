@@ -43,14 +43,14 @@ class Watchlist extends StatelessWidget {
                   width: 35,
                 ),
                 SizedBox(
-                  width: 10,
+                  width: 7,
                 ),
                 Text(
                   coinabbr.toUpperCase(),
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20,
+                        fontSize: 17,
                       ),
                 ),
                 SizedBox(
@@ -60,9 +60,9 @@ class Watchlist extends StatelessWidget {
                   coiname,
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: textColor,
-                        fontFamily: 'NunitoSans-Regular',
+                        fontFamily: 'NexaRegular',
                         fontWeight: FontWeight.normal,
-                        fontSize: 13,
+                        fontSize: 12,
                       ),
                 ),
               ],
@@ -74,8 +74,8 @@ class Watchlist extends StatelessWidget {
               coinvalue,
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                     color: Colors.black,
-                    fontSize: 20,
-                    fontFamily: 'NunitoSans-Bold',
+                    fontSize: 16,
+                    fontFamily: 'NexaBold',
                     fontWeight: FontWeight.w500,
                   ),
             ),
@@ -85,7 +85,7 @@ class Watchlist extends StatelessWidget {
             Text(
               percentage,
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontFamily: 'NunitoSans-Medium',
+                    fontFamily: 'NexaRegular',
                     fontSize: 14,
                     color: percentageColor,
                   ),

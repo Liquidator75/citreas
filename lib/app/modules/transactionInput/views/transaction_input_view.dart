@@ -13,6 +13,42 @@ class TransactionInputView extends GetView<TransactionInputController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            CupertinoIcons.arrow_left,
+            color: Colors.white,
+          ),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 30,
+              child: CircleAvatar(
+                radius: 15,
+                backgroundImage: AssetImage('assets/momo.png'),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              'Mobile Money',
+              style: TextStyle(
+                fontSize: 17,
+                fontFamily: 'NexaBold',
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: primaryColor,
       body: Container(
         color: primaryColor,
@@ -20,60 +56,12 @@ class TransactionInputView extends GetView<TransactionInputController> {
           physics: NeverScrollableScrollPhysics(),
           child: Column(
             children: [
-              SizedBox(height: 20),
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(vertical: 50),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          icon: Icon(
-                            CupertinoIcons.arrow_left,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Expanded(
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // ignore: sized_box_for_whitespace
-                                Container(
-                                  height: 30,
-                                  child: CircleAvatar(
-                                    radius: 15,
-                                    backgroundImage:
-                                        AssetImage('assets/momo.png'),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  'Mobile Money',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    fontFamily: 'NexaBold',
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 12,
-                    ),
                     Text(
                       'How much would you love to deposit?',
                       style: TextStyle(
@@ -83,7 +71,6 @@ class TransactionInputView extends GetView<TransactionInputController> {
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(height: 8),
                     Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
@@ -162,7 +149,7 @@ class TransactionInputView extends GetView<TransactionInputController> {
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       padding: EdgeInsets.all(8),
-                      childAspectRatio: 1.09,
+                      childAspectRatio: Get.height > 600 ? 1.3 : 1.09,
                       crossAxisSpacing: 8,
                       mainAxisSpacing: 8,
                       children: [

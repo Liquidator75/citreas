@@ -4,6 +4,7 @@ import 'package:citreas/config/colors.dart';
 import 'package:flutter/material.dart';
 
 class FilledButtoned extends StatefulWidget {
+  // ignore: non_constant_identifier_names
   final Function Onpressed;
   final Color color;
   final Color buttonTextColor;
