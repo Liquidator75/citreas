@@ -22,6 +22,7 @@ sonarqube {
         // Add other SonarQube properties as needed
     }
 }
+apply plugin: "org.sonarqube"
 
 allprojects {
     repositories {
