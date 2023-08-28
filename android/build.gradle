@@ -17,7 +17,7 @@ plugins {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', '172.31.19.240' // Replace with your SonarQube server URL
+        property 'sonar.host.url', 'http://172.31.19.240' // Replace with your SonarQube server URL
         property 'sonar.login', '812350a63a7c0b497d1d1e810b029a5a565a02ae' // Replace with your SonarQube authentication token
         // Add other SonarQube properties as needed
     }
