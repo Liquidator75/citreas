@@ -1,7 +1,7 @@
-thinkrich.com.citreas.app-jetified-window-1.0.0-beta04-0 /Users/liquidator/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
-thinkrich.com.citreas.app-jetified-annotation-experimental-1.1.0-1 /Users/liquidator/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
-thinkrich.com.citreas.app-core-1.6.0-2 /Users/liquidator/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res
-thinkrich.com.citreas.app-jetified-window-java-1.0.0-beta04-3 /Users/liquidator/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
+thinkrich.com.citreas.app-jetified-window-java-1.0.0-beta04-0 /Users/liquidator/.gradle/caches/transforms-3/40a751be8ff09cd354c24da61c2866a5/transformed/jetified-window-java-1.0.0-beta04/res
+thinkrich.com.citreas.app-jetified-annotation-experimental-1.1.0-1 /Users/liquidator/.gradle/caches/transforms-3/8be3ac1e2e92c226761a3cc8c7d80bdd/transformed/jetified-annotation-experimental-1.1.0/res
+thinkrich.com.citreas.app-jetified-window-1.0.0-beta04-2 /Users/liquidator/.gradle/caches/transforms-3/f056aa19a02855b71f79d96692d7d925/transformed/jetified-window-1.0.0-beta04/res
+thinkrich.com.citreas.app-core-1.6.0-3 /Users/liquidator/.gradle/caches/transforms-3/f5f2853dd6453fd084f043e95deae3eb/transformed/core-1.6.0/res
 thinkrich.com.citreas.app-debug-4 /Users/liquidator/Desktop/citreas/android/app/src/debug/res
 thinkrich.com.citreas.app-main-5 /Users/liquidator/Desktop/citreas/android/app/src/main/res
 thinkrich.com.citreas.app-pngs-6 /Users/liquidator/Desktop/citreas/build/app/generated/res/pngs/debug
