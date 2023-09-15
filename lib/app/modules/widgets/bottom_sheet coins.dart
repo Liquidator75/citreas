@@ -4,7 +4,6 @@ import 'package:citreas/app/controllers/coin_controller.dart';
 import 'package:citreas/app/modules/widgets/buycrpto_wid.dart';
 import 'package:citreas/app/modules/widgets/small_search.dart';
 import 'package:citreas/config/colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -103,6 +102,7 @@ class BottomSheetCoins extends StatelessWidget {
                                           .coinsList[index].currentPrice,
                                       'image':
                                           _controller.coinsList[index].image,
+                                      'name': _controller.coinsList[index].name,
                                     },
                                   );
                                 },

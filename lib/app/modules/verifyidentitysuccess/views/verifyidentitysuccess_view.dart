@@ -3,6 +3,7 @@
 import 'package:citreas/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:citreas/app/modules/welcome/views/welcome_view.dart';
 import 'package:citreas/app/modules/widgets/filled_button.dart';
+import 'package:citreas/app/modules/widgets/line_button.dart';
 import 'package:citreas/config/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -51,12 +52,13 @@ class VerifyidentitysuccessView
               SizedBox(
                 height: 100,
               ),
-              FilledButtoned(
-                buttonTextColor: Colors.white,
-                login: 'Get Started',
-                Onpressed: () => Get.to(DashboardView()),
+              LinedButton(
+                sidedColor: primaryColor,
+                signup: 'Get Started',
+                onPressed: () => Get.to(DashboardView()),
+                buttonTextColor: primaryColor,
                 color: primaryColor,
-              )
+              ),
             ],
           ),
         ),

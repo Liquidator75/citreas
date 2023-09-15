@@ -10,19 +10,19 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		3zcAHImnFMj9ASwBcFz7qg1sWn0=
+		DK/VufTTi2ToQaR3lqsqgkuZuxE=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		TvRG8mqPpIbozzqoWIDtXYHWA3M=
+		4row25/ILEoyAXgQSO+pK3bPcUs=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		wKRo4vEoYhW5h4V5SscPEnx6G5w=
+		ks8Z9eT+30dFovcZrHVvVo53crg=
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		39SiQavGND6NnKi7KJzGaiK1uUw=
+		nM41scvVD0RX3gZSAEgPq2pvlzg=
 		</data>
 		<key>flutter_assets/assets/.DS_Store</key>
 		<data>
@@ -55,6 +55,10 @@
 		<key>flutter_assets/assets/Verified-bro.png</key>
 		<data>
 		y50z9skB/CAA9kw2aOYINF1Ucbs=
+		</data>
+		<key>flutter_assets/assets/abi.json</key>
+		<data>
+		fb4Z5RbycHXz5NolEDehFmhRg88=
 		</data>
 		<key>flutter_assets/assets/bitcon.png</key>
 		<data>
@@ -134,11 +138,35 @@
 		</data>
 		<key>flutter_assets/isolate_snapshot_data</key>
 		<data>
-		dRka9t86+Ik10kMCLsudB3ofChY=
+		rEm9QHmX9lHK140Gnnn2K8SPfaU=
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		3nBqnROEyDsIVp3cht2v1LgfsMU=
+		k7t/VnzX/5Gi2cef24RnIwyG/BQ=
+		</data>
+		<key>flutter_assets/packages/amplify_auth_cognito_dart/lib/src/workers/workers.min.js</key>
+		<data>
+		U6RihR49y/jZIqCPzH9uAEXFML4=
+		</data>
+		<key>flutter_assets/packages/amplify_auth_cognito_dart/lib/src/workers/workers.min.js.map</key>
+		<data>
+		LIkXXoM0nv2g7M1sBwAr3SKb56U=
+		</data>
+		<key>flutter_assets/packages/amplify_authenticator/assets/social-buttons/SocialIcons.ttf</key>
+		<data>
+		FbTsAzXLe6KxTqVbMJlm8rNLQug=
+		</data>
+		<key>flutter_assets/packages/amplify_authenticator/assets/social-buttons/google.png</key>
+		<data>
+		0+UJa+A8I1QPFpxrodrNw42cQGs=
+		</data>
+		<key>flutter_assets/packages/amplify_secure_storage_dart/lib/src/worker/workers.min.js</key>
+		<data>
+		AOLh0IZcfhP38oT9H6AzRZhUJ2g=
+		</data>
+		<key>flutter_assets/packages/amplify_secure_storage_dart/lib/src/worker/workers.min.js.map</key>
+		<data>
+		D3tsNQx6Zt0AWyY8YZeViAZHaVo=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -1190,7 +1218,7 @@
 		</data>
 		<key>flutter_assets/vm_snapshot_data</key>
 		<data>
-		wVCDsOQlJhUyvrMuhaM3MeqUNWk=
+		+HsWKuOINTMijVvKruokFpzcml8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1199,28 +1227,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W54FV8SIvtsBowop4F8qskdxZtL8WtG9rRV957cEkXE=
+			kxZ/WLEDy9mDWGcQkJoYE2yTD2OKpjANQU33jomS++M=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W9Bgeo9YtPzKqxR72HEPMuRMb6I1ADQ5LCwRdTYfYms=
+			pX++XcJuLMmrfX3bo+UhbagF04KUjtYGP+CqpA91G/k=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MpFaPIFy3MLZlKHI5g5THyKA8qMRIuSkHbHJId3Wln0=
+			9P1yBaRjzEoO9iwTKHOim4I2vEBKvSZYsEfvN/DiZ9c=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rYDyrxpzqPNcYA4uP58PQ08Ms5OfeqKaIYsJOQ4NhZ4=
+			sFU7X1n0BYC1rPmk4RCLb7cOM6kt1OXaqVgwIVPJp8Q=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/Data%20extraction.png</key>
@@ -1270,6 +1298,13 @@
 			<key>hash2</key>
 			<data>
 			zp4gifIvosNytnrIEaplYXePLwsHfHzXg3AY4cmN17g=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vBBte59C1O5df5APJZsw/WCtBgutfg6o4Kw2FB8d1M0=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/bitcon.png</key>
@@ -1409,14 +1444,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pdp3wvU0CLVp+3Afd6I6QxM36Oe5dQcuavhGP5QJ6Ec=
+			xqTNttXLjHIz+PPExj3G9tN4xAJ96JV248w0bfsuIyQ=
 			</data>
 		</dict>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			juzi1Br/KJTAOuebF3ID/qeiNMBxqvr41PXfmzQUN7s=
+			f7sWZqiJ1cTzKGGvqxrfxumV2wpVM9+Hb9p/2AOB/a0=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/amplify_auth_cognito_dart/lib/src/workers/workers.min.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zYgK2ZSAifxmRtnkkJoYkI69aAh+H6EzzqK4QVanuJM=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/amplify_auth_cognito_dart/lib/src/workers/workers.min.js.map</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LLnKv3EP/9bkxau0/akKkHOiUPOiu1GA218MvjAwT+U=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/amplify_authenticator/assets/social-buttons/SocialIcons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mhoGvTBdacD8ycucSEzQXpaUZTfWCQEqq6JYgtxwBXI=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/amplify_authenticator/assets/social-buttons/google.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4gh/WFw7ITulN6Vsi8jmE0xp1voaVyjTBt9W1pe056s=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/amplify_secure_storage_dart/lib/src/worker/workers.min.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kz3b/ufoCUkfzaijUKMgBaXIbEouiZyJTqZrcGDWDxI=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/amplify_secure_storage_dart/lib/src/worker/workers.min.js.map</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1oA/8Lal0DsnJr2GI/53KCcc8qZHg7HwMaPvwnweDZg=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -3257,7 +3334,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pKvVVo/CPIJFzUPS2fhLuWOuiKFXCBKbw9g8gmDjVXE=
+			XRpcsR0vWGkDzG+35GjjzaJtqN3CuV3azmWWPti/o3M=
 			</data>
 		</dict>
 	</dict>

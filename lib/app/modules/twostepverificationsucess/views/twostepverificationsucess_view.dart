@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:citreas/app/modules/verifyidentitysuccess/views/verifyidentitysuccess_view.dart';
 import 'package:citreas/app/modules/widgets/filled_button.dart';
+import 'package:citreas/app/modules/widgets/line_button.dart';
 import 'package:citreas/config/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -46,12 +49,19 @@ class TwostepverificationsucessView
               SizedBox(
                 height: 100,
               ),
-              FilledButtoned(
-                buttonTextColor: Colors.white,
-                login: 'Next',
-                Onpressed: () => Get.to(VerifyidentitysuccessView()),
+              LinedButton(
+                sidedColor: primaryColor,
+                signup: 'Continue',
+                onPressed: () => Get.to(VerifyidentitysuccessView()),
+                buttonTextColor: primaryColor,
                 color: primaryColor,
-              )
+              ),
+              // FilledButtoned(
+              //   buttonTextColor: Colors.white,
+              //   login: 'Next',
+
+              //   color: primaryColor,
+              // )
             ],
           ),
         ),

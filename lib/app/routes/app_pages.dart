@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/AmountInput/bindings/amount_input_binding.dart';
+import '../modules/AmountInput/views/amount_input_view.dart';
 import '../modules/Market/bindings/market_binding.dart';
 import '../modules/Market/views/market_view.dart';
 import '../modules/OTP/bindings/otp_binding.dart';
@@ -85,32 +87,32 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => const LoginView(),
+      page: () => LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.CREATE_ACCOUNT,
-      page: () => const CreateAccountView(),
+      page: () => CreateAccountView(),
       binding: CreateAccountBinding(),
     ),
     GetPage(
       name: _Paths.VERIFY_EMAIL,
-      page: () => const VerifyEmailView(),
+      page: () => VerifyEmailView(),
       binding: VerifyEmailBinding(),
     ),
     GetPage(
       name: _Paths.VERIFY_SUCESS,
-      page: () => const VerifySucessView(),
+      page: () => VerifySucessView(),
       binding: VerifySucessBinding(),
     ),
     GetPage(
       name: _Paths.SECURE_ACCOUNT,
-      page: () => const SecureAccountView(),
+      page: () => SecureAccountView(),
       binding: SecureAccountBinding(),
     ),
     GetPage(
       name: _Paths.TWO_STEP_VERIFY,
-      page: () => const TwoStepVerifyView(),
+      page: () => TwoStepVerifyView(),
       binding: TwoStepVerifyBinding(),
     ),
     GetPage(
@@ -120,32 +122,32 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MARKET,
-      page: () => const MarketView(),
+      page: () => MarketView(),
       binding: MarketBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE,
-      page: () => const ProfileView(),
+      page: () => ProfileView(),
       binding: ProfileBinding(),
     ),
     GetPage(
       name: _Paths.SENDCRYPTO,
-      page: () => const SendcryptoView(),
+      page: () => SendcryptoView(),
       binding: SendcryptoBinding(),
     ),
     GetPage(
       name: _Paths.TWOSTEPVERIFICATIONSUCESS,
-      page: () => const TwostepverificationsucessView(),
+      page: () => TwostepverificationsucessView(),
       binding: TwostepverificationsucessBinding(),
     ),
     GetPage(
       name: _Paths.VERIFYIDENTITY,
-      page: () => const VerifyidentityView(),
+      page: () => VerifyidentityView(),
       binding: VerifyidentityBinding(),
     ),
     GetPage(
       name: _Paths.VERIFYIDENTITYSUCCESS,
-      page: () => const VerifyidentitysuccessView(),
+      page: () => VerifyidentitysuccessView(),
       binding: VerifyidentitysuccessBinding(),
     ),
     GetPage(
@@ -165,27 +167,27 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SELLCRYPTO,
-      page: () => const SellcryptoView(),
+      page: () => SellcryptoView(),
       binding: SellcryptoBinding(),
     ),
     GetPage(
       name: _Paths.SWAPCRYPTO,
-      page: () => const SwapcryptoView(),
+      page: () => SwapcryptoView(),
       binding: SwapcryptoBinding(),
     ),
     GetPage(
       name: _Paths.SENDCRYPTOCONFIRMATION,
-      page: () => const SendcryptoconfirmationView(),
+      page: () => SendcryptoconfirmationView(),
       binding: SendcryptoconfirmationBinding(),
     ),
     GetPage(
       name: _Paths.DEPOSITCRYPTO,
-      page: () => const DepositcryptoView(),
+      page: () => DepositcryptoView(),
       binding: DepositcryptoBinding(),
     ),
     GetPage(
       name: _Paths.WITHDRAW_CRPTO,
-      page: () => const WithdrawCrptoView(),
+      page: () => WithdrawCrptoView(),
       binding: WithdrawCrptoBinding(),
     ),
     GetPage(
@@ -195,12 +197,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.ETHEREUM,
-      page: () => const EthereumView(),
+      page: () => EthereumView(),
       binding: EthereumBinding(),
     ),
     GetPage(
       name: _Paths.TETHER,
-      page: () => const TetherView(),
+      page: () => TetherView(),
       binding: TetherBinding(),
     ),
     GetPage(
@@ -210,28 +212,33 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.TRANSACTION_SUCCESS,
-      page: () => const TransactionSuccessView(),
+      page: () => TransactionSuccessView(),
       binding: TransactionSuccessBinding(),
     ),
     GetPage(
       name: _Paths.TRANSACTION_INPUT,
-      page: () => const TransactionInputView(),
+      page: () => TransactionInputView(),
       binding: TransactionInputBinding(),
     ),
     GetPage(
       name: _Paths.TRANSACTION_OVERVIEW,
-      page: () => const TransactionOverviewView(),
+      page: () => TransactionOverviewView(),
       binding: TransactionOverviewBinding(),
     ),
     GetPage(
       name: _Paths.RECEIVE_CRYPTO,
-      page: () => const ReceiveCryptoView(),
+      page: () => ReceiveCryptoView(),
       binding: ReceiveCryptoBinding(),
     ),
     GetPage(
       name: _Paths.SUCESFULY_SENT_CRYPTO,
-      page: () => const SucesfulySentCryptoView(),
+      page: () => SucesfulySentCryptoView(),
       binding: SucesfulySentCryptoBinding(),
+    ),
+    GetPage(
+      name: _Paths.AMOUNT_INPUT,
+      page: () => AmountInputView(),
+      binding: AmountInputBinding(),
     ),
   ];
 }

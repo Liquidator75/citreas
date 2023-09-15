@@ -2,17 +2,17 @@
 
 import 'package:citreas/app/modules/OTP/views/otp_view.dart';
 import 'package:citreas/app/modules/widgets/filled_button.dart';
+
 import 'package:citreas/config/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-
 import '../controllers/two_step_verify_controller.dart';
 
 class TwoStepVerifyView extends GetView<TwoStepVerifyController> {
-  const TwoStepVerifyView({Key? key}) : super(key: key);
+  final TwoStepVerifyController controller = Get.put(TwoStepVerifyController());
+  TwoStepVerifyView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,13 +166,23 @@ class TwoStepVerifyView extends GetView<TwoStepVerifyController> {
                 height: 70,
               ),
               FilledButtoned(
-                buttonTextColor: Colors.white,
-                login: 'Next',
-                Onpressed: () {
-                  Get.to(OtpView());
-                },
+                progressColor: Colors.white,
+                load: 'Please Wait....',
+                text: 'Get Code',
+                width: 370,
+                height: 55,
+                onPressed: () => Get.to(OtpView()),
                 color: primaryColor,
-              )
+                isLoading: controller.isLoading,
+              ),
+              // FilledButtoned(
+              //   buttonTextColor: Colors.white,
+              //   login: 'Next',
+              //   Onpressed: () {
+
+              //   },
+              //   color: primaryColor,
+              // )
             ],
           ),
         )),

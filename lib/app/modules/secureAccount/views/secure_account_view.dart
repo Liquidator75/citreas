@@ -11,7 +11,9 @@ import 'package:get/get.dart';
 import '../controllers/secure_account_controller.dart';
 
 class SecureAccountView extends GetView<SecureAccountController> {
-  const SecureAccountView({Key? key}) : super(key: key);
+  final SecureAccountController controller = Get.put(SecureAccountController());
+
+  SecureAccountView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,13 +52,24 @@ class SecureAccountView extends GetView<SecureAccountController> {
                 height: 100,
               ),
               FilledButtoned(
-                buttonTextColor: Colors.white,
-                login: 'Get Started',
-                Onpressed: () {
-                  Get.to(TwoStepVerifyView());
-                },
+                progressColor: Colors.white,
+                load: '',
+                text: 'Enable',
+                width: 350,
+                height: 55,
+                onPressed: () => Get.to(TwoStepVerifyView()),
                 color: primaryColor,
-              )
+                isLoading: controller.isLoading,
+              ),
+
+              // FilledButtoned(
+              //   buttonTextColor: Colors.white,
+              //   login: 'Get Started',
+              //   Onpressed: () {
+
+              //   },
+              //   color: primaryColor,
+              // )
             ],
           ),
         ),

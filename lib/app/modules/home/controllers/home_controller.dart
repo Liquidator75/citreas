@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  var isLoading = false.obs;
   //TODO: Implement HomeController
 
   final count = 0.obs;

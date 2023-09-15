@@ -1,0 +1,68 @@
+{
+  "api": {
+    "container2a2a388e": {
+      "apiType": "REST",
+      "authName": "citreas",
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "ClusterName",
+            "VpcId",
+            "VpcCidrBlock",
+            "SubnetIds",
+            "VpcLinkId",
+            "CloudMapNamespaceId"
+          ],
+          "category": "",
+          "resourceName": "NetworkStack"
+        },
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb"
+          ],
+          "category": "auth",
+          "resourceName": "citreas"
+        }
+      ],
+      "deploymentMechanism": "FULLY_MANAGED",
+      "iamAccessUnavailable": true,
+      "imageSource": {
+        "template": "dockercompose-rest-express",
+        "type": "TEMPLATE"
+      },
+      "providerPlugin": "awscloudformation",
+      "resourceName": "container2a2a388e",
+      "restrictAccess": true,
+      "service": "ElasticContainer",
+      "skipHashing": false
+    }
+  },
+  "auth": {
+    "citreas": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  }
+}

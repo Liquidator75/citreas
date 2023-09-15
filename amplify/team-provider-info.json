@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-citreas-dev-213853-authRole",
+      "UnauthRoleArn": "arn:aws:iam::375698112789:role/amplify-citreas-dev-213853-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::375698112789:role/amplify-citreas-dev-213853-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-citreas-dev-213853-deployment",
+      "UnauthRoleName": "amplify-citreas-dev-213853-unauthRole",
+      "StackName": "amplify-citreas-dev-213853",
+      "StackId": "arn:aws:cloudformation:us-east-2:375698112789:stack/amplify-citreas-dev-213853/87447760-51ac-11ee-9158-022237916e0b",
+      "AmplifyAppId": "d91cz6vzrov7r",
+      "NetworkStackS3Url": "https://s3.amazonaws.com/amplify-citreas-dev-213853-deployment/amplify-cfn-templates/networkingStackTemplate.json"
+    },
+    "categories": {
+      "auth": {
+        "citreas": {}
+      },
+      "api": {
+        "container2a2a388e": {}
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:citreas/config/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -9,8 +11,14 @@ class UsernameField extends StatelessWidget {
     this.keyboardtype,
     this.obscure = false,
     this.icon,
+    this.onSavedCallback,
+    this.usernameController,
+    this.validator,
   }) : super(key: key);
   final String? labelText;
+  final Function(String?)? onSavedCallback;
+  final TextEditingController? usernameController;
+  final String? Function(String?)? validator;
   final String? hintext;
   final TextInputType? keyboardtype;
   final bool? obscure;
@@ -21,34 +29,45 @@ class UsernameField extends StatelessWidget {
         child: Column(
       children: [
         TextFormField(
+          onSaved: onSavedCallback,
           cursorColor: primaryColor,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          controller: usernameController,
           keyboardType: keyboardtype,
+          validator: validator,
           obscureText: obscure!,
           decoration: InputDecoration(
+            iconColor: primaryColor,
+            focusColor: primaryColor,
+            fillColor: primaryColor,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
             labelText: labelText,
-
-            labelStyle: const TextStyle(
+            // ignore: prefer_const_constructors
+            labelStyle: TextStyle(
               color: textColor,
-              fontFamily: 'Gilroy-Medium',
+              fontFamily: 'NexaRegular',
             ),
             hintText: hintext,
             // ignore: prefer_const_constructors
             hintStyle: TextStyle(
               color: hintTextColor,
-              fontFamily: 'Gilroy-Regular',
+              fontFamily: 'NexaRegular',
             ),
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            contentPadding: const EdgeInsets.symmetric(
+            // ignore: prefer_const_constructors
+            contentPadding: EdgeInsets.symmetric(
               horizontal: 35,
               vertical: 20,
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(color: borderColor),
               gapPadding: 10,
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(color: borderColor),
               gapPadding: 10,
             ),

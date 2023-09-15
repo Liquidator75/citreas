@@ -168,12 +168,12 @@ class SucesfulySentCryptoView extends GetView<SucesfulySentCryptoController> {
                   SizedBox(
                     height: 20,
                   ),
-                  FilledButtoned(
-                    color: primaryColor,
-                    buttonTextColor: Colors.white,
-                    login: "Done",
-                    Onpressed: () => Get.to(DashboardView()),
-                  ),
+                  // FilledButtoned(
+                  //   color: primaryColor,
+                  //   buttonTextColor: Colors.white,
+                  //   login: "Done",
+                  //   Onpressed: () => Get.to(DashboardView()),
+                  // ),
                 ],
               ),
             ),

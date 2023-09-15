@@ -32,7 +32,7 @@ class PinconfirmationView extends GetView<PinconfirmationController> {
       backgroundColor: primaryColor,
       body: Column(
         children: [
-          SizedBox(height: Get.height > 600 ? 30 : 140),
+          SizedBox(height: Get.height > 500 ? 30 : 140),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +44,7 @@ class PinconfirmationView extends GetView<PinconfirmationController> {
                         fontSize: 15,
                       ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 10),
                 Container(
                   height: 80.0,
                   child: Obx(
@@ -147,7 +147,9 @@ class PinconfirmationView extends GetView<PinconfirmationController> {
               onPressed: () => Get.to(TransactionSuccessView()),
             ),
           ),
-          SizedBox(height: 18),
+          SizedBox(
+            height: 18,
+          ),
         ],
       ),
     );

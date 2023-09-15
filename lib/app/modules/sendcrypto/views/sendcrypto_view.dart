@@ -150,12 +150,12 @@ class SendcryptoView extends GetView<SendcryptoController> {
                 ],
               ),
             ),
-            FilledButtoned(
-              color: primaryColor,
-              buttonTextColor: Colors.white,
-              login: "Continue",
-              Onpressed: () => Get.to(TransactionOverviewView()),
-            ),
+            // FilledButtoned(
+            //   color: primaryColor,
+            //   buttonTextColor: Colors.white,
+            //   login: "Continue",
+            //   Onpressed: () => Get.to(TransactionOverviewView()),
+            // ),
           ],
         ),
       ),

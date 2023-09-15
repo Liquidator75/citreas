@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:citreas/app/modules/twoStepVerify/views/two_step_verify_view.dart';
 import 'package:citreas/app/modules/twostepverificationsucess/views/twostepverificationsucess_view.dart';
 import 'package:citreas/app/modules/widgets/filled_button.dart';
 import 'package:citreas/app/modules/widgets/line_button.dart';
@@ -13,7 +14,8 @@ import 'package:get/get.dart';
 import '../controllers/otp_controller.dart';
 
 class OtpView extends GetView<OtpController> {
-  const OtpView({Key? key}) : super(key: key);
+  final OtpController controller = Get.put(OtpController());
+  OtpView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,11 +129,15 @@ class OtpView extends GetView<OtpController> {
                   height: 20,
                 ),
                 FilledButtoned(
-                  buttonTextColor: Colors.white,
-                  login: 'Next',
-                  Onpressed: () => Get.to(TwostepverificationsucessView()),
+                  progressColor: Colors.white,
+                  load: '',
+                  text: 'Create Account',
+                  width: 350,
+                  height: 55,
+                  onPressed: () => Get.to(TwostepverificationsucessView()),
                   color: primaryColor,
-                )
+                  isLoading: controller.isLoading,
+                ),
               ],
             ),
           ),

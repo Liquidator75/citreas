@@ -39,6 +39,7 @@ abstract class Routes {
   static const TRANSACTION_OVERVIEW = _Paths.TRANSACTION_OVERVIEW;
   static const RECEIVE_CRYPTO = _Paths.RECEIVE_CRYPTO;
   static const SUCESFULY_SENT_CRYPTO = _Paths.SUCESFULY_SENT_CRYPTO;
+  static const AMOUNT_INPUT = _Paths.AMOUNT_INPUT;
 }
 
 abstract class _Paths {
@@ -77,4 +78,5 @@ abstract class _Paths {
   static const TRANSACTION_OVERVIEW = '/transaction-overview';
   static const RECEIVE_CRYPTO = '/receive-crypto';
   static const SUCESFULY_SENT_CRYPTO = '/sucesfuly-sent-crypto';
+  static const AMOUNT_INPUT = '/amount-input';
 }

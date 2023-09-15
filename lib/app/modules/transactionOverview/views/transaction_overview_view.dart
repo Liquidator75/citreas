@@ -263,12 +263,12 @@ class TransactionOverviewView extends GetView<TransactionOverviewController> {
             SizedBox(
               height: 20,
             ),
-            FilledButtoned(
-              buttonTextColor: Colors.white,
-              login: 'Proccess Transaction',
-              Onpressed: () => Get.to(SucesfulySentCryptoView()),
-              color: primaryColor,
-            )
+            // FilledButtoned(
+            //   buttonTextColor: Colors.white,
+            //   login: 'Proccess Transaction',
+            //   Onpressed: () => Get.to(SucesfulySentCryptoView()),
+            //   color: primaryColor,
+            // )
           ],
         ),
       ),

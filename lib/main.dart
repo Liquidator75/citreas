@@ -1,11 +1,15 @@
+import 'package:amplify_api/amplify_api.dart';
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:citreas/amplifyconfiguration.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 
-void main() {
-  Color primaryColor = Color(0XFF2B0752);
+Future<void> main() async {
+  Color primaryColor = const Color(0XFF2B0752);
   MaterialColor primarySwatch = MaterialColor(
     primaryColor.value,
     <int, Color>{
@@ -21,6 +25,23 @@ void main() {
       900: primaryColor,
     },
   );
+
+  Future<void> _configureAmplify() async {
+    try {
+      await Amplify.addPlugins(
+        [
+          AmplifyAuthCognito(),
+          AmplifyAPI(),
+        ],
+      );
+      await Amplify.configure(amplifyconfig);
+    } on AmplifyException catch (e) {
+      safePrint(e);
+    }
+  }
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await _configureAmplify();
 
   runApp(
     GetMaterialApp(

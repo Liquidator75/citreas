@@ -10,7 +10,9 @@ import 'package:get/get.dart';
 import '../controllers/verify_sucess_controller.dart';
 
 class VerifySucessView extends GetView<VerifySucessController> {
-  const VerifySucessView({Key? key}) : super(key: key);
+  final VerifySucessController controller = Get.put(VerifySucessController());
+
+  VerifySucessView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,13 +54,23 @@ class VerifySucessView extends GetView<VerifySucessController> {
                 height: 200,
               ),
               FilledButtoned(
-                buttonTextColor: Colors.white,
-                login: 'Next',
-                Onpressed: () {
-                  Get.to(SecureAccountView());
-                },
+                progressColor: Colors.white,
+                load: '',
+                text: 'Continue',
+                width: 350,
+                height: 55,
+                onPressed: () => Get.to(SecureAccountView()),
                 color: primaryColor,
-              )
+                isLoading: controller.isLoading,
+              ),
+              // FilledButtoned(
+              //   buttonTextColor: Colors.white,
+              //   login: 'Next',
+              //   Onpressed: () {
+
+              //   },
+              //   color: primaryColor,
+              // )
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_const_constructors_in_immutables
 
+import 'package:citreas/app/controllers/coin_controller.dart';
 import 'package:citreas/app/modules/sendcryptoconfirmation/views/sendcryptoconfirmation_view.dart';
 import 'package:citreas/app/modules/widgets/line_button.dart';
 import 'package:citreas/config/colors.dart';
@@ -8,8 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class NumberInputButton extends StatefulWidget {
-  NumberInputButton({Key? key, required this.name, required this.coiname})
-      : super(key: key);
+  NumberInputButton({
+    Key? key,
+    required this.name,
+    required this.coiname,
+  }) : super(key: key);
+
   final String name;
   final String coiname;
 
@@ -21,6 +26,13 @@ class _NumberInputButtonState extends State<NumberInputButton> {
   TextEditingController _textEditingController = TextEditingController();
   String enteredNumber = '';
   bool isBTCMode = false;
+  double enteredValue = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+    _textEditingController.text = '0.0';
+  }
 
   @override
   void dispose() {
@@ -30,30 +42,33 @@ class _NumberInputButtonState extends State<NumberInputButton> {
 
   void updateEnteredNumber(String value) {
     setState(() {
-      if (enteredNumber == '0') {
-        enteredNumber = value;
+      if (value == '.') {
+        if (!enteredNumber.contains('.')) {
+          enteredNumber += value;
+        }
       } else {
         enteredNumber += value;
       }
-      _textEditingController.text = enteredNumber;
+      enteredValue = double.tryParse(enteredNumber) ?? 0.0;
+      _textEditingController.text = enteredValue.toStringAsFixed(7);
     });
   }
 
   void clearEnteredNumber() {
     setState(() {
-      enteredNumber = '0';
-      _textEditingController.text = enteredNumber;
+      enteredNumber = '';
+      enteredValue = 0.0;
+      _textEditingController.text = '0.0';
     });
   }
 
   void deleteEnteredNumber() {
     setState(() {
-      if (enteredNumber.length > 1) {
+      if (enteredNumber.isNotEmpty) {
         enteredNumber = enteredNumber.substring(0, enteredNumber.length - 1);
-        _textEditingController.text = enteredNumber;
-      } else {
-        enteredNumber = '0';
-        _textEditingController.text = enteredNumber;
+        enteredValue = double.tryParse(enteredNumber) ?? 0.0;
+        _textEditingController.text =
+            enteredNumber.isNotEmpty ? enteredValue.toStringAsFixed(7) : '0.0';
       }
     });
   }
@@ -63,34 +78,29 @@ class _NumberInputButtonState extends State<NumberInputButton> {
     final Map<String, dynamic>? arguments =
         Get.arguments as Map<String, dynamic>?;
     final String symbol = arguments?['symbol'] ?? '';
-
     final double currentPrice = arguments?['currentPrice'] ?? 0.0;
     final String image = arguments?['image'] ?? '';
+    final String name = arguments?['name'];
 
     void convertEnteredNumber() {
-      double currentValue =
-          double.parse(enteredNumber.replaceAll(RegExp('[^0-9.]'), ''));
+      double currentValue = enteredValue;
       double convertedValue;
       String convertedText;
+
       if (isBTCMode) {
         convertedValue = currentValue * currentPrice;
-        convertedText = '${convertedValue.toStringAsFixed(1)} USD';
+        convertedText = '\$${convertedValue.toStringAsFixed(1)} USD';
       } else {
         convertedValue = currentValue / currentPrice;
         convertedText = '${convertedValue.toStringAsFixed(7)} $symbol';
       }
 
       setState(() {
-        enteredNumber = convertedText;
+        enteredValue = convertedValue;
+        enteredNumber =
+            isBTCMode ? convertedText : enteredValue.toStringAsFixed(7);
         _textEditingController.text = enteredNumber;
         isBTCMode = !isBTCMode; // Toggle the display mode
-      });
-    }
-
-    void clearEnteredNumber() {
-      setState(() {
-        enteredNumber = '0 USD';
-        _textEditingController.text = '';
       });
     }
 
@@ -323,12 +333,24 @@ class _NumberInputButtonState extends State<NumberInputButton> {
                       buttonTextColor: Colors.white,
                       color: primaryColor,
                       signup: '${widget.coiname} $symbol',
-                      onPressed: () => Get.to(SendcryptoconfirmationView()),
+                      onPressed: () {
+                        Get.to(
+                          SendcryptoconfirmationView(),
+                          arguments: {
+                            'enteredValue': enteredValue,
+                            'symbol': symbol.toUpperCase(),
+                            'currentPrice': '\$$currentPrice',
+                            'name': name,
+                          },
+                        );
+                      },
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(
+                height: 16,
+              ),
             ],
           ),
         ),

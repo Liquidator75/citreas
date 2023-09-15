@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		U7chFokJrMPA1XKDqY3O3VCjSvw=
+		nJp8zhsY8bHj25gqdi2/i9cGi0c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/money_converter.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		HyZ4O5Wt+yLfl/pWBmGHgJFedAU=
+		7XecygXIysh6ePXcZiadwer3VK0=
 		</data>
 		<key>Modules/money_converter.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		AjLfE1Rmf/Vp7sunBih3KFXQXfM=
+		yOFLRUGk4GZtD+3kOYNvJqjAr1s=
 		</data>
 		<key>Modules/money_converter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/money_converter.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ol82P2D5TMLCb/eYEJcm7OH850U=
+		jS8IFlBeQtCmAz/xNqBUsY45jrg=
 		</data>
 		<key>Modules/money_converter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		raV7+nTbYVAqDAHrIKvwV/nLwaY=
+		2gPnhd3po6BL3HjaX4x7Cb32mOM=
 		</data>
 		<key>Modules/money_converter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/money_converter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		AH2CDxKUoKo97MzW4lRYkDpDoHo=
+		8YkMQrb4sP6XVC+5pHu1j2hTPYw=
 		</data>
 		<key>Modules/money_converter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		s90g+yHAtxYCxW01I6HEOPX5zQ4=
+		UKldJuxEVPEQPhtgGZ9si7nbjZ0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -91,14 +91,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			09ZdL+lRNraNf6ENxpImmg7oSXVDBK1LaLAu9Sx5tDA=
+			HsPbN+haQSKDaKAqitl63OLNvlecAzt/HJgGDgYHmtA=
 			</data>
 		</dict>
 		<key>Modules/money_converter.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OcztePlaECpzJ6JLmDFz3RIAkN8XM6I6kn5AW7R2E9g=
+			iRm1xXe7jOPl4wjAWQEAQ7FSABUaYykE03tSfxt4FHo=
 			</data>
 		</dict>
 		<key>Modules/money_converter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -112,14 +112,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RfX9Mu+2dlV4lVQ8+uUa2dL13SWp45pXxzaz+NYWCRk=
+			lp2bte9PMXJKUPCfggEF2W8rkCtykSrHG/8Fka1dtyw=
 			</data>
 		</dict>
 		<key>Modules/money_converter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y8iDQsk5SpDQqWYKfA8WwzhOEuO92x5x/MjignqPo+o=
+			UQrr+sPqQIkiy5rDOy7Gm6RErahb2clJ3d7RVZemsbY=
 			</data>
 		</dict>
 		<key>Modules/money_converter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -133,14 +133,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wgBqCLx0cj3sGNt49RA1cNNN4nJ1fX9UQispK64SGRQ=
+			uCRoCptGkrkGLmheSFjcur4NMz/rZuRG0GcdLWlW+yU=
 			</data>
 		</dict>
 		<key>Modules/money_converter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F5TISUD3h9Cg0RrS3Yd2CQbEDEY/MNvM3O/IcYMPm2o=
+			UbHzgffm25efTOWsCAJY68Oy2hKmzC43JFMo8ueNvWw=
 			</data>
 		</dict>
 	</dict>

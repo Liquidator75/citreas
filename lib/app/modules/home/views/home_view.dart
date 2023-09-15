@@ -12,6 +12,7 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
+  final HomeController controller = Get.put(HomeController());
   HomeView({Key? key}) : super(key: key);
 
   @override
@@ -52,19 +53,25 @@ class HomeView extends GetView<HomeController> {
             ),
             SizedBox(height: 40),
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: EdgeInsets.only(bottom: 30),
               child: FilledButtoned(
                 color: Colors.white,
+                // loadingColor: primaryColor,
+                realtextColor: primaryColor,
+                //LoadingtextColor: primaryColor,
                 buttonTextColor: primaryColor,
-                login: "Log In",
-                Onpressed: () {
-                  Get.to(LoginView());
-                },
+                height: 55,
+                width: 350,
+                // login: "Log In",
+                load: 'Please Wait....',
+                text: 'Login',
+                onPressed: () => Get.to(Get.to(LoginView())),
+                isLoading: controller.isLoading,
               ),
             ),
             SizedBox(height: 2),
             Padding(
-              padding: const EdgeInsets.only(bottom: 80.0),
+              padding: EdgeInsets.only(bottom: 80.0),
               child: LinedButton(
                 sidedColor: Colors.white,
                 buttonTextColor: Colors.white,

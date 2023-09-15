@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:citreas/app/modules/pinconfirmation/views/pinconfirmation_view.dart';
 import 'package:citreas/app/modules/widgets/filled_button.dart';
 import 'package:citreas/config/colors.dart';
@@ -12,9 +11,23 @@ import '../controllers/sendcryptoconfirmation_controller.dart';
 
 class SendcryptoconfirmationView
     extends GetView<SendcryptoconfirmationController> {
-  const SendcryptoconfirmationView({Key? key}) : super(key: key);
+  //final String ethValue; // New parameter
+
+  final SendcryptoconfirmationController controller =
+      Get.put(SendcryptoconfirmationController());
+  SendcryptoconfirmationView(
+
+      //this.ethValue,
+      {Key? key})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final Map<String, dynamic>? arguments =
+        Get.arguments as Map<String, dynamic>?;
+    final double enteredValue = arguments?['enteredValue'];
+    final String currentPrice = arguments?['currentPrice'] ?? 0.0;
+    final String name = arguments?['name'];
+    // final double currentPrice = arguments?['currentPrice'] ?? 0.0;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -47,7 +60,8 @@ class SendcryptoconfirmationView
                   height: 25,
                 ),
                 Text(
-                  '\$0.00000978 BTC',
+                  '$enteredValue',
+                  //  ' ETH Value: $ethValue',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 28,
                         fontWeight: FontWeight.w800,
@@ -63,13 +77,13 @@ class SendcryptoconfirmationView
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Bitcoin Price',
+                        name,
                         style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               fontSize: 14,
                             ),
                       ),
                       Text(
-                        '\$34,000',
+                        '$currentPrice',
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                               fontFamily: 'NexaBold',
                               fontWeight: FontWeight.w500,
@@ -153,7 +167,7 @@ class SendcryptoconfirmationView
                             ),
                       ),
                       Text(
-                        '\$200.00',
+                        '$enteredValue',
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                               fontFamily: 'NexaBold',
                               fontWeight: FontWeight.w600,
@@ -251,11 +265,21 @@ class SendcryptoconfirmationView
                   height: 30,
                 ),
                 FilledButtoned(
-                  buttonTextColor: Colors.white,
-                  login: 'Pay \$200,11',
-                  Onpressed: () => Get.to(PinconfirmationView()),
+                  progressColor: Colors.white,
+                  load: '',
+                  text: 'Pay $enteredValue',
+                  width: 350,
+                  height: 55,
+                  onPressed: () => Get.to(PinconfirmationView()),
                   color: primaryColor,
-                )
+                  isLoading: controller.isLoading,
+                ),
+                // FilledButtoned(
+                //   buttonTextColor: Colors.white,
+                //   login: 'Pay \$200,11',
+                //   Onpressed: () => Get.to(PinconfirmationView()),
+                //   color: primaryColor,
+                // )
               ],
             ),
           ),

@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 class VerifyEmailController extends GetxController {
   //TODO: Implement VerifyEmailController
-
+  var isLoading = false.obs;
   final count = 0.obs;
   @override
   void onInit() {

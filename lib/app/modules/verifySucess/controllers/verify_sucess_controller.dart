@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 class VerifySucessController extends GetxController {
   //TODO: Implement VerifySucessController
+  var isLoading = false.obs;
 
   final count = 0.obs;
   @override

@@ -11,41 +11,44 @@ class OTPField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         // ignore: prefer_const_literals_to_create_immutables
         children: [
-          SizedBox(
-            height: 68,
-            width: 64,
-            child: TextFormField(
-              onChanged: (value) {
-                if (value.length == 1) {
-                  FocusScope.of(context).nextFocus();
-                }
-              },
-              decoration: InputDecoration(
-                labelStyle: Theme.of(context).textTheme.bodyText1!.copyWith(
-                      fontSize: 20,
-                    ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: borderColor),
-                  gapPadding: 10,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: SizedBox(
+              height: 50,
+              width: 50,
+              child: TextFormField(
+                onChanged: (value) {
+                  if (value.length == 1) {
+                    FocusScope.of(context).nextFocus();
+                  }
+                },
+                decoration: InputDecoration(
+                  labelStyle: Theme.of(context).textTheme.bodyText1!.copyWith(
+                        fontSize: 20,
+                      ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: borderColor),
+                    gapPadding: 10,
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: borderColor),
+                    gapPadding: 10,
+                  ),
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: borderColor),
-                  gapPadding: 10,
-                ),
+                onSaved: (pin1) {},
+                cursorColor: primaryColor,
+                keyboardType: TextInputType.number,
+                textAlign: TextAlign.center,
+                inputFormatters: [
+                  LengthLimitingTextInputFormatter(1),
+                  FilteringTextInputFormatter.digitsOnly
+                ],
               ),
-              onSaved: (pin1) {},
-              cursorColor: primaryColor,
-              keyboardType: TextInputType.number,
-              textAlign: TextAlign.center,
-              inputFormatters: [
-                LengthLimitingTextInputFormatter(1),
-                FilteringTextInputFormatter.digitsOnly
-              ],
             ),
           ),
           SizedBox(
@@ -146,6 +149,84 @@ class OTPField extends StatelessWidget {
                 ),
               ),
               onSaved: (pin4) {},
+              cursorColor: primaryColor,
+              keyboardType: TextInputType.number,
+              textAlign: TextAlign.center,
+              inputFormatters: [
+                LengthLimitingTextInputFormatter(1),
+                FilteringTextInputFormatter.digitsOnly
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 68,
+            width: 64,
+            child: TextFormField(
+              onChanged: (value) {
+                if (value.length == 1) {
+                  FocusScope.of(context).nextFocus();
+                }
+              },
+              decoration: InputDecoration(
+                labelStyle: const TextStyle(
+                  color: textColor,
+                  fontFamily: 'Gilroy-Medium',
+                ),
+                hintStyle: TextStyle(
+                  color: hintTextColor,
+                  fontFamily: 'Gilroy-Regular',
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: const BorderSide(color: borderColor),
+                  gapPadding: 10,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: const BorderSide(color: borderColor),
+                  gapPadding: 10,
+                ),
+              ),
+              onSaved: (pin5) {},
+              cursorColor: primaryColor,
+              keyboardType: TextInputType.number,
+              textAlign: TextAlign.center,
+              inputFormatters: [
+                LengthLimitingTextInputFormatter(1),
+                FilteringTextInputFormatter.digitsOnly
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 68,
+            width: 64,
+            child: TextFormField(
+              onChanged: (value) {
+                if (value.length == 1) {
+                  FocusScope.of(context).nextFocus();
+                }
+              },
+              decoration: InputDecoration(
+                labelStyle: const TextStyle(
+                  color: textColor,
+                  fontFamily: 'Gilroy-Medium',
+                ),
+                hintStyle: TextStyle(
+                  color: hintTextColor,
+                  fontFamily: 'Gilroy-Regular',
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: const BorderSide(color: borderColor),
+                  gapPadding: 10,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: const BorderSide(color: borderColor),
+                  gapPadding: 10,
+                ),
+              ),
+              onSaved: (pin6) {},
               cursorColor: primaryColor,
               keyboardType: TextInputType.number,
               textAlign: TextAlign.center,
